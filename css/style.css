@@ -1,0 +1,667 @@
+/* ====================
+Common Parts
+==================== */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box; 
+    transition: all .4s ease-in-out; 
+}
+
+section, body{
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a, a:hover, a:visited, a:active, a:focus{
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+}
+
+ol, ul, li{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+input, textarea{
+    resize: none;
+}
+
+.c1{color: #c9223d!important;}
+.c2{color: #fedac3!important;}
+.c3{color: #1a1a1c!important;}
+.c4{color: #ebebe9!important;}
+
+.bg1{background-color: #c9223d!important;}
+.bg2{background: #fedac3!important;}
+.bg3{background: #1a1a1c!important;}
+.bg4{background: #ebebe9!important;}
+
+
+.px-6{
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.pt-6{
+    padding-top: 80px;
+}
+
+h2.title{
+    font-size: 160px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+    color: #fedac3;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+p.sub-title{
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: #fedac3;
+    line-height: 1.2;
+}
+
+a.custom-btn{
+    display: inline-block;
+    font-size: 35px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    background: #1a1a1c;
+    color: #fedac3;
+    padding: 12px 35px;
+    margin-top: 60px;
+    border-radius: 50px;
+    text-transform: uppercase;
+}
+
+a.custom-btn:hover {
+    box-shadow: inset 0 0 0 6px rgb(255 255 255 / 30%);
+}
+
+a.custom-btn.bg1:hover {
+    /* box-shadow: inset 0 0 0 6px rgb(201, 34, 61, .3); */
+    box-shadow: inset 0 0 0 6px rgb(0 0 0 / 30%);
+}
+
+
+/* ====================
+Header/Navbar Section
+==================== */
+
+header{
+    margin-bottom: -91px;
+    overflow: visible;
+    position: sticky;
+    top: 0;
+    z-index: 999999999;
+}
+
+.main-nav .nav-item .nav-link{
+    color: #ebebe9;
+    font-size: 22px;
+    font-weight:600;
+    font-family: 'Montserrat', sans-serif;
+    padding: 12px 25px!important;
+    border-radius: 30px;
+}
+
+.main-nav .nav-item .nav-link.active, .main-nav .nav-item .nav-link:hover{
+    color: #c9223d;
+    background: #ebebe9;
+}
+
+.main-nav .nav-item:not(:first-child) {
+    margin-left: 50px!important;
+}
+
+.icon-nav .nav-item .nav-link{
+    color: #ebebe9;
+    background: #c9223d;
+    border: 1px solid #c9223d;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border-radius: 50%;
+    transition: all .3s;
+}
+
+.icon-nav .nav-item:not(:last-child){
+    margin-right: 10px;
+}
+
+.icon-nav .nav-item .nav-link i{
+    font-size: 20px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .3s;
+}
+
+.icon-nav .nav-item .nav-link:hover{
+    color: #c9223d;
+    background: #ebebe9;
+}
+
+.icon-nav .nav-item .nav-link:hover{
+    background: #ebebe9;
+    color: #c9223d;
+    transform: translate(-5px, -5px);
+}
+
+
+
+
+/* ====================
+Banner Section
+==================== */
+
+#banner_sec{
+    height: 100vh;
+    background: url(../img/banner.png) no-repeat top right, #c9223d;
+    background-size: auto 100%;
+    overflow-y: hidden;
+}
+
+#banner_sec .row{
+    position: relative;
+}
+
+#banner_sec .overlay_1{
+    height: 100%;
+    width: 70%;
+    background: #c9223d;
+    margin-right: -75px;
+    transform: skewX(-20deg);
+}
+
+#banner_sec .overlay_2{
+    height: 100%;
+    width: 150px;
+    opacity: .6;
+    background: #1a1a1c;
+    margin-right: -75px;
+    transform: skewX(-20deg);
+}
+
+#banner_sec .overlay_3{
+    height: 100%;
+    width: 150px;
+    opacity: .6;
+    background: #1a1a1c;
+    transform: skewX(-20deg);
+}
+
+#banner_sec .overlay_4{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* ====================
+Places Section
+==================== */
+
+#places_sec{
+    padding: 100px 0;
+}
+
+#places_sec h2.title{
+    position: relative;
+    padding-bottom: 20px;
+}
+
+#places_sec h2.title::after{
+    position: absolute;
+	content: '';
+	width: 60%;
+	height: 12px;
+	bottom: 0px;
+	left: 0px;
+	background: #c9223d;
+}
+
+#places_sec .single_place img{
+    filter: drop-shadow(0px 5px 6px rgba(26,26,28,0.75));
+}
+
+#places_sec .single_place h3{
+    font-size: 35px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+    color: #1a1a1c;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#places_sec .single_place p{
+    font-size: 25px;
+    font-weight: 400;
+    color: #1a1a1c;
+}
+
+/* ====================
+Get Out Now Section 01
+==================== */
+
+#get_out_now_sec_01{
+    height: 100vh;
+    background: url(../img/get_out_now_bg_01.png) no-repeat top left, #1a1a1c;
+    background-size: auto 100%;
+    overflow-y: hidden;
+}
+
+#get_out_now_sec_01 .row{
+    position: relative;
+}
+
+#get_out_now_sec_01 .overlay_1{
+    height: 100%;
+    width: 150px;
+    opacity: .6;
+    background: #c9223d;
+    margin-right: -75px;
+    transform: skewX(10deg);
+}
+
+#get_out_now_sec_01 .overlay_2{
+    height: 100%;
+    width: 150px;
+    opacity: .6;
+    background: #c9223d;
+    margin-right: -75px;
+    transform: skewX(10deg);
+    z-index: 2;
+}
+
+#get_out_now_sec_01 .overlay_3{
+    height: 100%;
+    width: 75%;
+    background: #1a1a1c;
+    transform: skewX(10deg);
+}
+
+#get_out_now_sec_01 .overlay_4{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#get_out_now_sec_01 .title{
+    line-height: 0.8!important;
+    margin-bottom: 40px;
+}
+
+/* ====================
+Adventure Section
+==================== */
+#adventure_sec div.row:first-child .title{
+    font-size: 300px;
+    line-height: .8;
+}
+
+#adventure_sec div.row:first-child{
+    padding-top: 150px;
+    padding-bottom: 225px;
+}
+
+#adventure_sec div.row:last-child{
+    height: 100vh;
+    background: url(../img/women_offer_bg.png) no-repeat top left, #1a1a1c;
+    background-size: auto 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    position: relative;
+}
+
+#adventure_sec .overlay_1{
+    height: 100%;
+    width: 150px;
+    opacity: .6;
+    background: #c9223d;
+    margin-right: -75px;
+    transform: skewX(10deg);
+}
+
+#adventure_sec .overlay_2{
+    height: 100%;
+    width: 150px;
+    opacity: .6;
+    background: #c9223d;
+    margin-right: -75px;
+    transform: skewX(10deg);
+    z-index: 2;
+}
+
+#adventure_sec .overlay_3{
+    height: 100%;
+    width: 70%;
+    background: #1a1a1c;
+    transform: skewX(10deg);
+}
+
+#adventure_sec .overlay_4{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#adventure_sec .title{
+    line-height: 0.8!important;
+}
+
+#adventure_sec .focus{
+    font-size: 300px;
+}
+
+#adventure_sec .sub-title{
+    font-weight: bold;
+}
+
+/* ====================
+Discover Section
+==================== */
+#discover_sec{
+    padding-top: 145px;
+    padding-bottom: 245px;
+    background: url(../img/discover_smart_object.png) no-repeat top right, #c9223d;
+    background-size: auto 100%;
+}
+
+#discover_sec .title{
+    font-size: 250px;
+    line-height: .8!important;
+}
+
+#discover_sec .sub-title{
+    font-weight: bold;
+}
+
+/* ====================
+Tour Section
+==================== */
+
+#tour_sec{
+    height: 100vh;
+    background: url(../img/tour.png) no-repeat top right, #1a1a1c;
+    background-size: auto 100%;
+    overflow-y: hidden;
+}
+
+#tour_sec .row{
+    position: relative;
+}
+
+#tour_sec .overlay_1{
+    height: 100%;
+    width: 60%;
+    background:#1a1a1c;
+    margin-right: -75px;
+    transform: skewX(-20deg);
+}
+
+#tour_sec .overlay_2{
+    height: 100%;
+    width: 150px;
+    opacity: .6;
+    background: #c9223d;
+    margin-right: -75px;
+    transform: skewX(-20deg);
+}
+
+#tour_sec .overlay_3{
+    height: 100%;
+    width: 150px;
+    opacity: .6;
+    background: #c9223d;
+    transform: skewX(-20deg);
+}
+
+#tour_sec .overlay_4{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#tour_sec i.icon{
+    color:#fedac3;
+    font-size: 80px;
+    margin-right: 30px;
+}
+
+
+/* ====================
+Get Out Now Section 02
+==================== */
+
+#get_out_now_sec_02{
+    height: 100vh;
+    background: url(../img/get_out_now_bg_02.png) no-repeat top left, #c9223d;
+    background-size: auto 100%;
+    overflow-y: hidden;
+}
+
+#get_out_now_sec_02 .row{
+    position: relative;
+}
+
+#get_out_now_sec_02 .overlay_1{
+    height: 100%;
+    width: 150px;
+    opacity: .6;
+    background: #1a1a1c;
+    margin-right: -75px;
+    transform: skewX(10deg);
+}
+
+#get_out_now_sec_02 .overlay_2{
+    height: 100%;
+    width: 150px;
+    opacity: .6;
+    background: #1a1a1c;
+    margin-right: -75px;
+    transform: skewX(10deg);
+    z-index: 2;
+}
+
+#get_out_now_sec_02 .overlay_3{
+    height: 100%;
+    width: 55%;
+    background: #c9223d;
+    transform: skewX(10deg);
+}
+
+#get_out_now_sec_02 .overlay_4{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#get_out_now_sec_02 .title{
+    line-height: 0.8!important;
+    margin-bottom: 40px;
+}
+
+#get_out_now_sec_02 i.icon{
+    color:#fedac3;
+    font-size: 80px;
+    margin-right: 30px;
+}
+
+/* ====================
+Newsletter Section
+==================== */
+
+#newsletter_sec{
+    padding-top: 200px;
+    padding-bottom: 250px;
+    background: url(../img/subscribe_smart_object.png) no-repeat top left,#1a1a1c;
+    background-size: 100% 100%;
+}
+
+#newsletter_sec .subscribe_field{
+    margin-top: 50px;
+}
+
+#newsletter_sec .subscribe_field .input-group{
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 120px -20px rgba(0,0,0,0.68);
+    -webkit-box-shadow: 0px 0px 120px -20px rgba(0,0,0,0.68);
+    -moz-box-shadow: 0px 0px 120px -20px rgba(0,0,0,0.68);
+}
+
+#newsletter_sec .subscribe_field button{
+    font-size: 30px;
+    padding: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    background: #c9223d;
+    color: #fedac3;
+    font-weight: bold;
+    border: none;
+}
+
+#newsletter_sec .subscribe_field .input-group-lg>.form-control{
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    color: #1a1a1c;
+    border: none;
+}
+
+
+/* ====================
+Footer Section
+==================== */
+
+#footer_sec{
+    background-color: #c9223d;
+}
+
+#footer_sec>div:first-child{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#footer_sec h3{
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    color: #ebebe9;
+    padding-bottom: 20px;
+}
+
+#footer_sec p{
+    color: #ebebe9;
+    padding-right: 100px;
+    font-size: 21px;
+}
+
+#footer_sec ul.link-list{
+    padding: 0;
+}
+
+#footer_sec ul.link-list li{
+    margin-bottom: 10px;
+    transition: transform 500ms ease-in-out 25ms;
+}
+
+#footer_sec ul.link-list li a{
+    color: #ebebe9;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21px;
+    
+}
+
+#footer_sec ul.link-list li:hover{
+    transform: translateX(10px);
+}
+
+#footer_sec ul.social_icons{
+    padding: 0;
+    margin-top: 40px;
+}
+
+#footer_sec ul.social_icons li{
+    display: inline-block;
+    margin-right: 25px;
+}
+
+#footer_sec ul.social_icons a{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background: #ebebe9;
+    border-radius: 50px;
+    position: relative;
+    transition: transform 500ms ease-in-out 25ms;
+}
+
+#footer_sec ul.social_icons a:hover{
+    transform: translate(-10px, 10px);
+}
+
+#footer_sec ul.social_icons a i{
+    color: #1a1a1c ;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#footer_sec>div:last-child{
+    background: #1a1a1c;
+    color:#fedac3;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#footer_sec>div:last-child p{
+    font-size: 14px;
+}
+
+#footer_sec>div:last-child .author{
+    color: #c9223d;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

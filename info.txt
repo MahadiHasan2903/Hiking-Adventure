@@ -1,0 +1,9 @@
+Color -> #c9223d -> red
+#fedac3, 
+#1a1a1c -> black,
+#ebebe9 -> white
+
+
+
+font-family: 'Kanit', sans-serif; -> heading
+font-family: 'Montserrat', sans-serif; -> others
